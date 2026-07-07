@@ -23,13 +23,13 @@ def test_pitt_query():
 
     # Check for key concepts from pitt.txt
     assert "research" in answer.lower(), "Missing 'research' keyword"
-    # assert "medical" in answer.lower(), "Missing 'medical' keyword"
-    # assert "business" in answer.lower(), "Missing 'business' keyword"
-    # assert "engineering" in answer.lower(), "Missing 'engineering' keyword"
-    # assert "medicine" in answer.lower(), "Missing 'medicine' keyword"
-    # assert "business" in answer.lower(), "Missing 'business' keyword"
-    # assert "engineering" in answer.lower(), "Missing 'engineering' keyword"
-    # assert "medicine" in answer.lower(), "Missing 'medicine' keyword"
+    assert "medical" in answer.lower(), "Missing 'medical' keyword"
+    assert "business" in answer.lower(), "Missing 'business' keyword"
+    assert "engineering" in answer.lower(), "Missing 'engineering' keyword"
+    assert "medicine" in answer.lower(), "Missing 'medicine' keyword"
+    assert "business" in answer.lower(), "Missing 'business' keyword"
+    assert "engineering" in answer.lower(), "Missing 'engineering' keyword"
+    assert "medicine" in answer.lower(), "Missing 'medicine' keyword"
     
     print("✅ University of Pittsburgh query test passed")
 
