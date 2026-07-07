@@ -69,85 +69,6 @@ Query Processing → Semantic Retrieval → LLM Augmentation → Response
 - ✅ **CI/CD Pipeline** - Automated build, test, and deployment workflows
 - ✅ **RESTful API** - Clean, documented endpoints via FastAPI
 
-## Getting Started
-
-### Prerequisites
-
-- Python 3.9+
-- Docker (for containerized setup)
-- Kubernetes cluster (for cloud deployment)
-
-### Local Setup
-
-```bash
-# Clone the repository
-git clone https://github.com/griffinholcombe/personal-rag-api.git
-cd personal-rag-api
-
-# Install dependencies
-pip install -r requirements.txt
-
-# Prepare your documents (place .txt or .pdf files in docs/)
-# Then generate embeddings
-python embed_docs.py
-
-# Start the API server
-python app.py
-```
-
-The API will be available at `http://localhost:8000`
-
-### API Endpoints
-
-```bash
-# Health check
-GET /health
-
-# Query the RAG system
-POST /query
-Content-Type: application/json
-
-{
-  "question": "Your question here"
-}
-```
-
-### Docker Setup
-
-```bash
-# Build the Docker image
-docker build -t personal-rag-api .
-
-# Run the container
-docker run -p 8000:8000 personal-rag-api
-```
-
-### Kubernetes Deployment
-
-```bash
-# Apply Kubernetes manifests
-kubectl apply -f deployment.yaml
-kubectl apply -f service.yaml
-
-# Verify deployment
-kubectl get pods
-kubectl get svc personal-rag-api
-```
-
-## Testing
-
-Run semantic tests to validate retrieval accuracy:
-
-```bash
-python semantic_test.py
-```
-
-Tests verify that:
-
-- Retrieved documents are semantically relevant to queries
-- Embedding similarity scores are within expected ranges
-- Response generation works end-to-end
-
 ## CI/CD Pipeline
 
 Automated workflows (`.github/workflows/`) handle:
@@ -155,15 +76,6 @@ Automated workflows (`.github/workflows/`) handle:
 - **Build** - Docker image creation and registry push
 - **Test** - Unit and semantic tests on every push
 - **Deploy** - Automated deployment to Kubernetes on merge to main
-
-## Key Skills Demonstrated
-
-- **Backend Development** - FastAPI, REST API design, async Python
-- **Machine Learning** - Embeddings, semantic search, vector databases
-- **DevOps** - Docker containerization, Kubernetes orchestration
-- **CI/CD** - GitHub Actions workflow automation
-- **Testing** - Unit tests, integration tests, semantic validation
-- **Cloud Native** - Microservices architecture, container deployments
 
 ## Project Structure
 
@@ -178,16 +90,7 @@ personal-rag-api/
 ├── service.yaml           # Kubernetes service
 ├── .github/workflows/     # CI/CD pipelines
 ├── docs/                  # Sample documents
-└── requirements.txt       # Python dependencies
 ```
-
-## Future Enhancements
-
-- [ ] Multi-model support for embeddings
-- [ ] Caching layer for frequently accessed documents
-- [ ] Async document processing for large datasets
-- [ ] Metrics and monitoring integration
-- [ ] Admin endpoints for document management
 
 ## License
 
